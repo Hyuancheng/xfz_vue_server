@@ -1,0 +1,91 @@
+@import 'const.scss';
+
+/**************************尾部**********************/
+#footer {
+  border: none;
+  padding: 0;
+  margin-top: 20px;
+  height: 100px;
+  width: 100%;
+  background-color: #555e67;
+
+  .container {
+    width: $centerWidth;
+    height: 100px;
+    margin: 0 auto;
+    overflow: hidden;
+
+    .left {
+      float: left;
+      margin-top: 23px;
+      width: 168px;
+      height: 54px;
+      background: url(http://xfz.cn/static/build/images/foot-logo.png) no-repeat;
+      background-size: 100%;
+    }
+
+    .right {
+      float: left;
+      margin-left: 80px;
+      margin-top: 23px;
+
+      .top {
+        width: 800px;
+        height: 35px;
+
+        .top-left {
+          float: left;
+          width: 300px;
+          color: #c9c9c9;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+
+          li a {
+            color: #c9c9c9;
+          }
+        }
+
+        .about ul {
+          color: #c9c9c9;
+          margin-left: 70px;
+          float: left;
+          width: 250px;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+
+          a {
+            color: #c9c9c9
+          }
+        }
+      }
+
+      .bottom {
+        width: 820px;
+
+        .addr {
+          float: left;
+        }
+
+        .contact {
+          float: right;
+        }
+
+        p {
+          color: #c9c9c9;
+        }
+      }
+    }
+  }
+
+  .end {
+    width: 100%;
+    height: 60px;
+    box-sizing: border-box;
+    line-height: 60px;
+    text-align: center;
+    color: #c9c9c9;
+    background-color: #383e44;
+  }
+}

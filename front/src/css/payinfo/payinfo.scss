@@ -1,0 +1,87 @@
+@import '../module/base.scss';
+@import '../module/const.scss';
+@import "../module/header.scss";
+@import "../module/footer.scss";
+@import "../module/sidebar.scss";
+
+
+/**************************头部**********************/
+//导入
+
+/**************************主体**********************/
+#article {
+  margin-top: $headerHeight;
+  width: 100%;
+  overflow: hidden;
+
+  .container {
+    width: $centerWidth;
+    margin: 20px auto;
+
+    .left {
+      width: 800px;
+      float: left;
+      position: relative;
+
+      .banner{
+        width: 100%;
+        padding-bottom: 20px;
+
+        img{
+          width: 100%;
+        }
+      }
+
+      .course-list{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-between;
+
+        .course{
+          border: 1px solid #c9c9c9;
+          width: 390px;
+          height: 150px;
+          margin-bottom: 20px;
+          background-color: white;
+          box-sizing: border-box;
+
+          .course-image{
+            float: left;
+          }
+
+          .info-box{
+            float: left;
+            width: 270px;
+            box-sizing: border-box;
+            padding-left: 20px;
+
+
+            .course-title{
+              font-size: 20px;
+              padding: 10px 0;
+            }
+            .course-desc{
+              width: 100%;
+              height: 70px;
+            }
+            .price-line{
+              color: red;
+              text-align: right;
+            }
+          }
+        }
+      }
+    }
+
+    //已导入侧边栏
+  }
+}
+
+/**************************尾部**********************/
+//导入
+
+
+
+

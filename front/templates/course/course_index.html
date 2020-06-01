@@ -1,0 +1,31 @@
+{% extends  'common/course_base.html' %}
+
+{% block title %}
+    <title>课程首页-小饭桌</title>
+{% endblock %}
+
+{% block link %}
+    <link rel="stylesheet" href="{% static 'css/course/course_index.min.css' %}">
+{% endblock %}
+
+{% block course_body %}
+    <!--主体版心-->
+    <ul class="container">
+    {% for course in courses %}
+        <li class="course-box">
+            <a href="{% url 'course:detail' course.id %}">
+                <div class="course-img">
+                    <img src="{{ course.cover_url }}" alt="">
+                </div>
+                <div class="course-info">
+                    <p class="course-title">{{ course.title }}</p>
+                    <p class="author">{{ course.teacher.username }}</p>
+                    <p class="price-line">
+                        <span class="price">￥{{ course.price }}</span>
+                    </p>
+                </div>
+            </a>
+        </li>
+    {% endfor %}
+    </ul>
+{% endblock %}

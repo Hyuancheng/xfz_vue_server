@@ -1,0 +1,80 @@
+{% extends  'common/base.html' %}
+
+{% block title %}
+    <title>新闻详情-小饭桌</title>
+{% endblock %}
+
+{% block link %}
+    <link rel="stylesheet" href="{% static 'css/news/news_detail.min.css' %}">
+{% endblock %}
+
+{% block ul %}
+    <ul>
+        <li class="active"><a href="{% url 'news:index' %}">创业资讯</a></li>
+        <li><a href="{% url 'course:index' %}">创业课堂</a></li>
+        <li><a href="{% url 'payinfo:index' %}">付费资讯</a></li>
+        <li><a href="/search/">搜索</a></li>
+    </ul>
+{% endblock %}
+
+{% block body %}
+    <article id="article" class="clearfix">
+        <!--版心-->
+        <div class="container">
+            <!--左侧-->
+            <div class="left">
+                <div class="head">
+                    <h1 class="title">{{ new.title }}</h1>
+                    <div class="box clearfix">
+                        <div class="info">
+                            <span class="author">{{ new.author }}</span>
+                            <span class="time">{{ new.pub_date }}</span>
+                            <span class="label"><a href="#">{{ new.category }}</a></span>
+                        </div>
+                        <div class="share">
+                            <span>分享至：</span>
+                            <a class="weixin" href="#"></a>
+                            <a class="weibo" href="#"></a>
+                        </div>
+                    </div>
+                </div>
+                <article class="article">
+                    {{ new.content | safe }}
+                </article>
+                <div class="comments">
+                    <p class="total">评论 (0)</p>
+                    {% if not user.is_authenticated %}
+                        <textarea class="un-login" name="comment" placeholder="登录后评论" readonly></textarea>
+                    {% else %}
+                        <textarea class="un-login" name="comment" placeholder="发表评论"></textarea>
+                    {% endif %}
+                    <div class="submit-box">
+                        <button class="submit">评论</button>
+                    </div>
+                    <ul class="comments-list">
+                        <li class="comment">
+                            <div class="comment-info">
+                                <span class="author">小丸子</span>
+                                <span class="time">3小时前</span>
+                            </div>
+                            <p class="comment-detail">
+                                这篇文章的内容十分有深度，文笔优美。
+                            </p>
+                        </li>
+                        <li class="comment">
+                            <div class="comment-info">
+                                <span class="author">小丸子</span>
+                                <span class="time">3小时前</span>
+                            </div>
+                            <p class="comment-detail">
+                                这篇文章的内容十分有深度，文笔优美。
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!--右侧-->
+            {% include 'common/sidebar.html' %}
+        </div>
+    </article>
+{% endblock %}

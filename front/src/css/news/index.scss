@@ -1,0 +1,212 @@
+@import '../module/base.scss';
+@import '../module/const.scss';
+@import "../module/header.scss";
+@import "../module/footer.scss";
+@import "../module/sidebar.scss";
+
+
+/**************************头部**********************/
+//导入
+
+/**************************主体**********************/
+#article {
+  margin-top: $headerHeight;
+  width: 100%;
+  overflow: hidden;
+
+  .container {
+    width: $centerWidth;
+    margin: 20px auto;
+
+    .left {
+      width: 800px;
+      float: left;
+      position: relative;
+
+      //左上方轮播图
+      .left-banner {
+        width: 100%;
+        height: 200px;
+        overflow: hidden;
+        position: relative;
+
+        img {
+          width: 800px;
+          height: 200px;
+        }
+      }
+
+      //轮播图按钮
+      .btn {
+        .left-btn {
+          outline: none;
+          background-color: transparent;
+          border: none;
+          position: absolute;
+          left: 10px;
+          top: 95px;
+          cursor: pointer;
+          transform: rotateZ(180deg);
+          display: none;
+        }
+
+        .right-btn {
+          outline: none;
+          background-color: transparent;
+          border: none;
+          position: absolute;
+          right: 10px;
+          top: 95px;
+          cursor: pointer;
+          display: none;
+        }
+
+        .label {
+          position: absolute;
+          left: 400px;
+          top: 170px;
+          transform: translateX(-50%);
+
+          .active {
+            background-color: purple;
+          }
+
+          li {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: white;
+            border: 2px solid purple;
+            margin: 5px;
+            float: left;
+            cursor: pointer;
+          }
+        }
+      }
+
+      //左侧下方内容
+      .left-bottom {
+        margin-top: 15px;
+        width: 100%;
+        background-color: white;
+
+        //导航部分
+        .bar {
+          width: 100%;
+          height: 60px;
+          line-height: 60px;
+          border-bottom: 1px solid #eee;
+
+
+          li {
+            float: left;
+            margin-right: 15px;
+
+            a {
+              padding: 0 10px;
+              text-decoration: none;
+              color: #878787;
+              font-size: 16px;
+            }
+
+            .active {
+              border-left: 5px solid cornflowerblue;
+              color: #212121;
+            }
+          }
+
+        }
+
+        //内容部分
+        .content {
+          width: 100%;
+
+          li {
+            box-sizing: border-box;
+            padding: 20px;
+            border-bottom: 1px solid #eee;
+
+            .content-left {
+              float: left;
+              margin-right: 30px;
+            }
+
+            .content-right {
+              float: left;
+              width: 470px;
+              height: 160px;
+
+              h2 {
+                font-size: 22px;
+
+                a {
+                  color: #000;
+                }
+
+                a:hover {
+                  color: cornflowerblue;
+                }
+              }
+
+              > p {
+                padding: 3px 0;
+                height: 65px;
+              }
+
+              .right-bottom {
+                position: relative;
+
+                .p1, .p2, .p3 {
+                  position: absolute;
+                  top: 10px
+                }
+
+                .p1 {
+                  a:hover {
+                    color: cornflowerblue;
+                  }
+                }
+
+                .p2 {
+                  left: 300px;
+                }
+
+                .p3 {
+                  left: 380px
+                }
+              }
+            }
+          }
+        }
+
+        //加载更多
+        .more {
+          width: 100%;
+          height: 80px;
+          line-height: 80px;
+          text-align: center;
+          overflow: hidden;
+
+          button {
+            width: 380px;
+            height: 40px;
+            border: none;
+            background-color: #d2dcea;
+            color: #6d85ac;
+            cursor: pointer;
+          }
+
+        }
+      }
+    }
+
+    //已导入侧边栏
+  }
+}
+
+/**************************尾部**********************/
+//导入
+
+
+
+

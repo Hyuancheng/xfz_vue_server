@@ -1,0 +1,83 @@
+{% extends  'common/course_base.html' %}
+
+{% block title %}
+    <title>课程详情-小饭桌</title>
+{% endblock %}
+
+{% block link %}
+    <link rel="stylesheet" href="{% static 'css/course/course_detail.min.css' %}">
+{% endblock %}
+
+{% block course_body %}
+    <!--主体版心-->
+    <div class="container">
+        <div class="course-banner">
+            <p class="course-title">{{ course.title }}</p>
+            <div class="share-box clearfix">
+                <div class="share">
+                    <span class="share-to">分享至：</span>
+                    <a class="weixin" href="#"></a>
+                    <a class="weibo" href="#"></a>
+                </div>
+                <div class="price-line">
+                    {% if course.price == 0 %}
+                        <h2 class="price">免费</h2>
+                    {% else %}
+                        <h2 class="price">￥{{ course.price }}</h2>
+                    {% endif %}
+                </div>
+            </div>
+            <div class="image">
+                <img src="{{ course.cover_url }}" alt="">
+            </div>
+        </div>
+        <div class="course-group">
+            <div class="item-group">
+                <p class="item-title">课程讲师</p>
+                <div class="teacher-info clearfix">
+                    <div class="teacher-image">
+                        <img class="image" alt="" src="{{ course.teacher.avatar }}">
+                    </div>
+                    <div class="info-box">
+                        <p class="teacher-name">{{ course.teacher.username }}</p>
+                        <p class="teacher-desc">{{ course.teacher.jobtitle }}</p>
+                    </div>
+                </div>
+                <p class="item-content">
+                    {{ course.teacher.profile }}
+                </p>
+            </div>
+            <div class="item-group">
+                <p class="item-title">课程简介</p>
+                <p class="item-content">
+                    {{ course.profile }}
+                </p>
+            </div>
+        </div>
+        <div class="course-suggest">
+            <p class="suggest-title">热门推荐</p>
+            <ul class="suggest-list">
+                <li class="suggest-body clearfix">
+                    <div class="suggest-left">
+                        <p class="title"><a href="#">王健林卖掉进军海外首个项目:17亿售伦敦ON...</a></p>
+                        <div class="author">
+                            <span>小黄人</span>
+                        </div>
+                    </div>
+                    <div class="suggest-image"><a href="#"><img
+                            src="https://static-image.xfz.cn/1526455098_289.png-course.list.small" alt=""></a></div>
+                </li>
+                <li class="suggest-body clearfix">
+                    <div class="suggest-left">
+                        <p class="title"><a href="#">王健林卖掉进军海外首个项目:17亿售伦敦ON...</a></p>
+                        <div class="author">
+                            <span>小黄人</span>
+                        </div>
+                    </div>
+                    <div class="suggest-image"><a href="#"><img
+                            src="https://static-image.xfz.cn/1526455098_289.png-course.list.small" alt=""></a></div>
+                </li>
+            </ul>
+        </div>
+    </div>
+{% endblock %}

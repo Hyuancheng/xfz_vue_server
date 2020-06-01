@@ -1,0 +1,144 @@
+@import 'const.scss';
+
+//侧边栏
+.sidebar {
+  background-color: white;
+  float: right;
+  width: 355px;
+  //右侧第一部分
+  .right-one {
+    width: 100%;
+
+    .one-title {
+      height: 60px;
+      line-height: 60px;
+      width: 100%;
+
+      span:first-child {
+        float: left;
+        font-size: 20px;
+        color: $commonFontColor;
+        margin-left: 10px;
+      }
+
+      span:last-child {
+        float: right;
+        margin-right: 20px;
+
+        a {
+          color: skyblue;
+          font-size: 15px;
+        }
+      }
+    }
+  }
+
+  //右侧第二部分
+  .right-two {
+    .two-title {
+      font-size: 20px;
+      padding: 30px 10px;
+      color: $commonFontColor;
+    }
+
+    .two-body {
+      .two-left {
+        float: left;
+        width: 200px;
+
+        li {
+          margin-left: 20px;
+          height: 52px;
+          line-height: 50px;
+          padding-left: 70px;
+          background-image: url(https://xfz.cn/static/build/images/side-icon.png);
+          background-repeat: no-repeat;
+          background-size: 26%;
+        }
+
+        li:nth-child(2) {
+          background-position: 0 -59px;
+        }
+
+        li:nth-child(3) {
+          background-position: 0 -122px;
+        }
+      }
+
+      .two-right {
+        float: left;
+        width: 102px;
+        margin: 0 20px;
+        background: url(https://xfz.cn/static/build/images/wxQr.jpg) no-repeat;
+        background-size: 100%;
+
+        p {
+          font-size: 12px;
+          margin-top: 100px;
+        }
+
+      }
+    }
+  }
+
+  //右侧第三部分
+  .right-three {
+    margin-top: 10px;
+
+    .three-title {
+      font-size: 20px;
+      color: $commonFontColor;
+      padding: 20px 10px;
+    }
+
+    .three-list {
+      padding: 15px;
+      box-sizing: border-box;
+      overflow: hidden;
+      width: 100%;
+
+      .three-body {
+        padding: 10px 0;
+        width: 100%;
+        height: 90px;
+
+        .three-left {
+          float: left;
+          width: 180px;
+
+          .left-title {
+            a {
+              font-size: 16px;
+              color: $commonFontColor;
+
+              &:hover {
+                color: cornflowerblue;
+              }
+            }
+          }
+
+          .left-foot {
+            margin-top: 20px;
+
+            p:first-child {
+              float: left;
+            }
+
+            p:last-child {
+              float: right;
+            }
+          }
+        }
+
+        .three-right {
+          width: 125px;
+          float: right;
+
+          img {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}

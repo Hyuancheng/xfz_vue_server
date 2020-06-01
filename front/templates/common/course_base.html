@@ -1,0 +1,31 @@
+
+{% extends  'common/base.html' %}
+
+{% block ul %}
+    <ul>
+        <li><a href="{% url 'news:index' %}">创业资讯</a></li>
+        <li class="active"><a href="{% url 'course:index' %}">创业课堂</a></li>
+        <li><a href="{% url 'payinfo:index' %}">付费资讯</a></li>
+        <li><a href="/search/">搜索</a></li>
+    </ul>
+{% endblock %}
+
+{% block body %}
+    <article id="article" class="clearfix">
+    <!--导航-->
+    <div class="bar">
+        <!--导航版心-->
+        <div class="bar-container">
+            <p class="title">在线课堂</p>
+            <ul class="list">
+                <li><a href="#" class="active">最新课堂</a></li>
+                <li><a href="#">投资人说</a></li>
+                <li><a href="#">明星案例</a></li>
+                <li><a href="#">创业知识</a></li>
+            </ul>
+        </div>
+    </div>
+    <!--主体版心-->
+    {% block course_body %}{% endblock %}
+</article>
+{% endblock %}

@@ -1,0 +1,207 @@
+@import '../module/base.scss';
+@import '../module/const.scss';
+@import "../module/header.scss";
+@import "../module/footer.scss";
+@import "../module/sidebar.scss";
+
+
+/**************************头部**********************/
+//导入
+
+/**************************主体**********************/
+#article {
+  margin-top: $headerHeight;
+  width: 100%;
+  overflow: hidden;
+
+  .bar {
+    height: 55px;
+    width: 100%;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.1);
+
+    .bar-container {
+      width: $centerWidth;
+      margin: 0 auto;
+      line-height: 55px;
+
+      .title {
+        float: left;
+        font-size: 22px;
+        color: $lightFontColor;
+        font-weight: bold;
+      }
+
+      .list {
+        float: left;
+        margin-left: 100px;
+
+      }
+
+      li {
+
+        float: left;
+        margin: 0 10px;
+        box-sizing: border-box;
+        padding: 0 10px;
+
+        a {
+          color: dimgrey;
+        }
+
+        .active {
+          color: #000;
+        }
+      }
+    }
+  }
+
+  .container {
+    width: $centerWidth;
+    margin: 20px auto;
+
+    .course-banner {
+      background-color: white;
+      margin-bottom: 30px;
+
+      .course-title {
+        padding: 15px;
+        font-size: 23px;
+      }
+
+      .share-box {
+        padding: 15px;
+        line-height: 28px;
+
+        .share {
+          float: left;
+
+          .share-to {
+            float: left;
+          }
+
+          .weixin {
+            float: left;
+            margin-right: 10px;
+            height: 28px;
+            width: 28px;
+            display: inline-block;
+            background-size: 240%;
+            background-image: url("https://xfz.cn/static/build/images/share.png");
+          }
+
+          .weibo {
+            float: left;
+            display: inline-block;
+            height: 28px;
+            width: 28px;
+            background-size: 240%;
+            background-position: -39px 0;
+            background-image: url("https://xfz.cn/static/build/images/share.png");
+          }
+        }
+
+        .price-line {
+          float: right;
+          padding: 0 10px;
+        }
+      }
+
+      .image {
+        img {
+          width: 100%;
+        }
+      }
+    }
+
+    .course-group {
+      width: 720px;
+      background-color: white;
+      padding: 0 30px 30px 20px;
+      float: left;
+
+      .item-group {
+        padding-top: 30px;
+
+        .item-title {
+          padding-left: 20px;
+          font-size: 20px;
+          margin: 10px 0;
+          border-left: 5px solid $aColor;
+        }
+
+        .teacher-info {
+          margin: 15px 0;
+          .teacher-image {
+            float: left;
+            height: 60px;
+
+            img {
+              border-radius: 50%;
+              height: 100%;
+            }
+          }
+
+          .info-box {
+            float: left;
+            padding-left: 10px;
+
+            .teacher-name {
+              color: $lightFontColor;
+            }
+
+            .teacher-desc {
+              color: $lightFontColor;
+              padding: 10px 0;
+            }
+          }
+        }
+
+        .item-content{
+          font-size: 18px;
+          line-height: 30px;
+        }
+      }
+
+    }
+
+    .course-suggest{
+      background-color: white;
+      float: right;
+      width: 420px;
+      padding: 0 20px;
+      .suggest-title{
+        padding: 15px 0;
+        font-size: 20px;
+      }
+
+      .suggest-list{
+        .suggest-body{
+          padding-bottom: 30px;
+          .suggest-left{
+            float: left;
+            width: 200px;
+
+            .author{
+              margin-top: 30px;
+              color: $lightFontColor;
+            }
+          }
+          .suggest-image{
+            float: right;
+            height: 100px;
+            img{
+              height: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/**************************尾部**********************/
+//导入
+
+
+
+

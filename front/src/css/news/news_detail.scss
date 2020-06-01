@@ -1,0 +1,154 @@
+@import '../module/base.scss';
+@import '../module/const.scss';
+@import "../module/header.scss";
+@import "../module/footer.scss";
+@import "../module/sidebar.scss";
+
+/**************************头部**********************/
+//导入
+
+/**************************主体**********************/
+#article {
+  margin-top: $headerHeight;
+  width: 100%;
+  overflow: hidden;
+
+  .container {
+    width: $centerWidth;
+    margin: 20px auto;
+
+    .left {
+      padding: 20px;
+      box-sizing: border-box;
+      width: 800px;
+      background-color: white;
+      float: left;
+      position: relative;
+
+      .head{
+        .title{
+          color: $commonFontColor;
+          font-size: 24px;
+          font-weight: normal;
+        }
+        .box{
+          padding: 10px;
+          line-height: 30px;
+          .info{
+            float: left;
+            span{
+              margin-right: 20px;
+              a{
+                color: $aColor;}
+            }
+          }
+
+          .share{
+            float: right;
+
+            span{
+              float: left;
+            }
+            .weixin{
+              float: left;
+              margin-right: 10px;
+              height: 28px;
+              width: 28px;
+              display: inline-block;
+              background-size: 240%;
+              background-image: url("https://xfz.cn/static/build/images/share.png");
+            }
+            .weibo{
+              float: left;
+              display: inline-block;
+              height: 28px;
+              width: 28px;
+              background-size: 240%;
+              background-position: -39px 0;
+              background-image: url("https://xfz.cn/static/build/images/share.png");
+            }
+          }
+        }
+      }
+      //文章主体
+      .article{
+        img{
+          max-width: 100%;
+        }
+      }
+
+      .comments{
+        margin-top: 20px;
+        border-top: 1px solid #eeeeee;
+
+        .total{
+          padding: 20px 0;
+          font-size: 20px;
+        }
+
+        .logined{
+          width: 100%;
+          height: 100px;
+          padding: 10px;
+          font-size: 15px;
+          box-sizing: border-box;
+          border-radius: 3px;
+          border: 1px solid lightgrey;
+        }
+        .un-login{
+          width: 100%;
+          padding: 10px;
+          box-sizing: border-box;
+          line-height: 18px;
+          font-size: 15px;
+          height: 42px;
+          border: 1px solid lightgrey;
+          border-radius: 3px;
+        }
+        .submit-box{
+          text-align: right;
+          padding: 10px 0;
+          .submit{
+            width: 100px;
+            height: 30px;
+            background-color: cornflowerblue;
+            border: none;
+            border-radius: 3px;
+            color: white;
+            font-size: 15px;
+            cursor: pointer;
+          }
+        }
+
+        //评论列表
+        .comments-list{
+          .comment{
+            padding: 10px 20px;
+            border-bottom: 1px solid  #eeeeee;
+            .comment-info{
+              padding: 20px 0;
+
+              .author{
+                color: grey;}
+            }
+              .time{
+                color: grey;
+                float: right;
+              }
+            .comment-detail{
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
+    //已导入侧边栏sidebar
+  }
+}
+
+/**************************尾部**********************/
+//导入
+
+
+
+

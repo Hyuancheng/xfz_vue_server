@@ -1,0 +1,73 @@
+{% extends 'common/base.html' %}
+
+{% block title %}
+    <title>小饭桌</title>
+{% endblock %}
+
+{% block link %}
+    <link rel="stylesheet" href="{% static 'css/news/index.min.css' %}">
+{% endblock %}
+
+{% block ul %}
+    <ul>
+        <li class="active"><a href="{% url 'news:index' %}">创业资讯</a></li>
+        <li><a href="{% url 'course:index' %}">创业课堂</a></li>
+        <li><a href="{% url 'payinfo:index' %}">付费资讯</a></li>
+        <li><a href="/search/">搜索</a></li>
+    </ul>
+{% endblock %}
+
+{% block body %}
+    <article id="article" class="clearfix">
+        <!--版心-->
+        <div class="container">
+            <!--左侧-->
+            <div class="left">
+                <!--左上轮播图-->
+                <div class="banner-container">
+                    <ul class="left-banner">
+                        <li><a href="#"><img src="https://static-image.xfz.cn/1523588994_243.jpg" alt=""></a></li>
+                        <li><a href="#"><img src="https://static-image.xfz.cn/1523588994_243.jpg" alt=""></a></li>
+                        <li><a href="#"><img src="https://static-image.xfz.cn/1523588994_243.jpg" alt=""></a></li>
+                        <li><a href="#"><img src="https://static-image.xfz.cn/1523588994_243.jpg" alt=""></a></li>
+                        <li><a href="#"><img src="https://static-image.xfz.cn/1523588994_243.jpg" alt=""></a></li>
+                        <li><a href="#"><img src="https://static-image.xfz.cn/1523588994_243.jpg" alt=""></a></li>
+                        <li><a href="#"><img src="https://static-image.xfz.cn/1523588994_243.jpg" alt=""></a></li>
+                        <li><a href="#"><img src="https://static-image.xfz.cn/1523588994_243.jpg" alt=""></a></li>
+                    </ul>
+                    <div class="btn">
+                        <button class="left-btn icon-jiantou  iconfont"></button>
+                        <button class="right-btn icon-jiantou  iconfont"></button>
+                        <ul class="label"></ul>
+                    </div>
+                </div>
+                <!--左下-->
+                <div class="left-bottom">
+                    <!--导航-->
+                    <div class="bar">
+                        <ul>
+                            <li><a class="active" href="#">最新资讯</a></li>
+                            <li><a href="#">热点</a></li>
+                            <li><a href="#">深度报道</a></li>
+                            <li><a href="#">干货分享</a></li>
+                            <li><a href="#">投资人说</a></li>
+                        </ul>
+                    </div>
+                    <!--内容-->
+                    {% include 'common/content_more.html' %}
+                    <!--加载更多-->
+                    <div class="more">
+                        <button>查看更多</button>
+                    </div>
+                </div>
+            </div>
+            <!--右侧-->
+            {% include 'common/sidebar.html' %}
+        </div>
+    </article>
+{% endblock %}
+
+{% block foot-js %}
+    <script src="{% static 'js/myTool.min.js' %}"></script>
+    <script src="{% static 'js/index.min.js' %}"></script>
+{% endblock %}

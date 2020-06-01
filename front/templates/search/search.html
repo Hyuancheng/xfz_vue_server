@@ -1,0 +1,78 @@
+{% extends  'common/base.html' %}
+
+{% block title %}
+    <title>搜索-小饭桌</title>
+{% endblock %}
+
+{% block link %}
+    <link rel="stylesheet" href="{% static 'css/search/search.min.css' %}">
+{% endblock %}
+
+{% block ul %}
+    <ul>
+        <li><a href="{% url 'news:index' %}">创业资讯</a></li>
+        <li><a href="{% url 'course:index' %}">创业课堂</a></li>
+        <li><a href="{% url 'payinfo:index' %}">付费资讯</a></li>
+        <li class="active"><a href="/search/">搜索</a></li>
+    </ul>
+{% endblock %}
+
+{% block body %}
+    <article id="article" class="clearfix">
+        <!--版心-->
+        <div class="container">
+            <!--左侧-->
+            <div class="left">
+                <div class="search-bar">
+                    <div class="search-box">
+                        <form action="" method="get">
+                            <label>
+                                <input type="text" class="search" name="q" placeholder="请输入关键词">
+                            </label>
+                            <button class="submit">搜 索</button>
+                        </form>
+                    </div>
+                </div>
+                <!--左下-->
+                <div class="left-bottom">
+                    <!--导航-->
+                    <div class="bar">
+                        <ul>
+                            <li><a class="active" href="#">搜索结果</a></li>
+                        </ul>
+                    </div>
+                    <!--内容-->
+                    <div class="content">
+                        <ul>
+                            {% for result in page.object_list %}
+                                {% with result.object as new %}
+                                    <li class="clearfix">
+                                        <!--左边-->
+                                        <div class="content-left">
+                                            <a href="{% url 'news:detail' %}?new_id={{ new.id }}"><img
+                                                    src="{{ new.thumbnail }}" alt=""></a>
+                                        </div>
+                                        <!--右边-->
+                                        <div class="content-right">
+                                            <h2>
+                                                <a href="{% url 'news:detail' %}?new_id={{ new.id }}">{{ new.title }}</a>
+                                            </h2>
+                                            <p>{{ new.des }}</p>
+                                            <div class="right-bottom">
+                                                <p class="p1"><a href="#">{{ new.category }}</a></p>
+                                                <p class="p2">{{ new.author }}</p>
+                                                <p class="p3">{{ new.pub_date|date:"Y-m-d" }}</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                {% endwith %}
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!--右侧-->
+            {% include 'common/sidebar.html' %}
+        </div>
+    </article>
+{% endblock %}
